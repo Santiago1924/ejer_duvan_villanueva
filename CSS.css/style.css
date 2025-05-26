@@ -20,15 +20,21 @@ body {
   max-width: 1200px;
   margin: auto;
   padding: 20px;
+  margin-top: 120px; /* Compensa altura del header fijo */
 }
 
 /* ----------------------------
    ENCABEZADO Y LOGO
 ----------------------------- */
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: #fff;
   border-bottom: 3px solid #78c2ad;
   padding: 20px;
+  z-index: 1000;
 }
 
 .header-content {
@@ -175,17 +181,6 @@ form textarea {
   border-radius: 5px;
 }
 
-/* ----------------------------
-   PIE DE PÁGINA
------------------------------ */
-footer {
-  background-color: #78c2ad;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-  font-size: 0.9rem;
-}
 input, select, textarea, button {
   width: 100%;
   padding: 10px;
@@ -205,4 +200,16 @@ button {
 
 button:hover {
   background-color: #45a049;
+}
+
+/* ----------------------------
+   PIE DE PÁGINA
+----------------------------- */
+footer {
+  background-color: #78c2ad;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 0.9rem;
 }
