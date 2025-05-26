@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Productos - Caninos y Felinos</title>
+  <link rel="stylesheet" href="CSS.css/style.css" />
+  <link rel="stylesheet" href="CSS.css/stylet.css">
+
+</head>
+<body class="fondo-animado">
+
+  <!-- Encabezado -->
+  <header>
+    <div class="header-content">
+      <div>
+        <h1>Caninos y Felinos</h1>
+        <p>Cuidamos a quienes amas</p>
+      </div>
+      <img src="img/logo.png" alt="Logo Caninos y Felinos" class="logo" />
+    </div>
+  </header>
+
+  <!-- Botón hamburguesa -->
+  <div class="menu-toggle" onclick="toggleMenu()">☰ Menú</div>
+
+  <!-- Menú de navegación -->
+  <nav>
+    <ul id="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="guarderia.html">Guardería</a></li>
+      <li><a href="promociones.html">Promociones</a></li>
+      <li><a href="registro.html">Registro</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main class="container">
+    <section class="intro">
+      <h2>Productos para el bienestar de tus mascotas</h2>
+      <p>
+        En Caninos y Felinos encontrarás una variedad de productos para perros y gatos:
+      </p>
+      <ul>
+        <li>Alimentos balanceados y snacks</li>
+        <li>Vitaminas y suplementos</li>
+        <li>Juguetes y rascadores</li>
+        <li>Productos de higiene y cuidado</li>
+        <li>Accesorios: correas, collares, camas y más</li>
+      </ul>
+      <img src="img/Poductos.png" alt="Productos para mascotas" class="logo" />
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 Caninos y Felinos. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Script para menú responsive -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-links").classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>

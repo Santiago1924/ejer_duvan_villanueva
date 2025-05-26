@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Promociones - Caninos y Felinos</title>
+  <link rel="stylesheet" href="CSS.css/style.css" />
+  <link rel="stylesheet" href="CSS.css/stylet.css">
+</head>
+<body class="fondo-animado">
+
+  <header>
+    <div class="header-content">
+      <div>
+        <h1>Caninos y Felinos</h1>
+        <p>Cuidamos a quienes amas</p>
+      </div>
+      <img src="img/logo.png" alt="Logo Caninos y Felinos" class="logo" />
+    </div>
+  </header>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰ Menú</div>
+
+  <nav>
+    <ul id="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="guarderia.html">Guardería</a></li>
+      <li><a href="promociones.html">Promociones</a></li>
+      <li><a href="registro.html">Registro</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <section class="intro">
+      <h2>Promociones Especiales</h2>
+      <p>
+        Aprovecha nuestras ofertas exclusivas para mantener la salud de tu mascota sin afectar tu bolsillo:
+      </p>
+      <ul>
+        <li>2x1 en consultas los martes</li>
+        <li>10% de descuento en alimentos premium</li>
+        <li>Vacunación con revisión gratuita</li>
+        <li>Descuentos por servicios combinados (baño + consulta + guardería)</li>
+      </ul>
+      <img src="img/Promociones.png" alt="Promociones veterinarias" class="logo" />
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Caninos y Felinos. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-links").classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>

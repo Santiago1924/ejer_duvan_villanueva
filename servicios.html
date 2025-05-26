@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Servicios - Caninos y Felinos</title>
+  <link rel="stylesheet" href="CSS.css/style.css" />
+  <link rel="stylesheet" href="CSS.css/stylet.css">
+</head>
+<body class="fondo-animado">
+
+  <header>
+    <div class="header-content">
+      <div>
+        <h1>Caninos y Felinos</h1>
+        <p>Cuidamos a quienes amas</p>
+      </div>
+      <img src="img/logo.png" alt="Logo Caninos y Felinos" class="logo" />
+    </div>
+  </header>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰ Menú</div>
+
+  <nav>
+    <ul id="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="guarderia.html">Guardería</a></li>
+      <li><a href="promociones.html">Promociones</a></li>
+      <li><a href="formulario.html">Registro</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <section class="intro">
+      <h2>¿Qué ofrecemos en Caninos y Felinos?</h2>
+      <p>
+        Somos un centro veterinario especializado en el cuidado integral de perros y gatos. Brindamos servicios como:
+      </p>
+      <ul>
+        <li>Consultas médicas generales y especializadas</li>
+        <li>Vacunación y desparasitación</li>
+        <li>Cirugías programadas</li>
+        <li>Servicio de guardería y peluquería</li>
+        <li>Emergencias 24/7</li>
+      </ul>
+      <img src="img/Servicios.png" alt="Nuestros servicios veterinarios" class="logo"/>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Caninos y Felinos. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-links").classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
