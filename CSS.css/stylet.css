@@ -102,6 +102,7 @@
   margin: 0;
   padding: 0;
   height: 100vh;
+<<<<<<< HEAD
   background: linear-gradient(270deg, #f3f7f8,  #f3f7f8);
   background-size: 600% 600%;
   animation: fondoAnimado 15s ease infinite;
@@ -134,3 +135,11 @@ header {
     margin-bottom: 1rem;
     list-style: none;
 }
+=======
+  background: linear-gradient(270deg, #03aa91, #62c486, #19bbc3);
+  background-size: 600% 600%;
+  animation: fondoAnimado 15s ease infinite;
+}
+
+    
+>>>>>>> 1ffab0a434903cc26dc89fc197d60276653ff343
