@@ -1,6 +1,4 @@
-/* ----------------------------
-   RESET Y CONFIGURACIÓN GLOBAL
------------------------------ */
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -8,202 +6,223 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #e0f7fa, #ffffff);
   color: #333;
   line-height: 1.6;
 }
 
-/* Contenedor principal */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
+header.header {
+  background-color: #00897b;
+  color: white;
   padding: 20px;
-}
-
-/* ----------------------------
-   ENCABEZADO Y LOGO
------------------------------ */
-header {
-  background-color: #fff;
-  border-bottom: 3px solid #78c2ad;
-  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .header-content {
-  
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.header-content h1 {
-  color: #4b4b4b;
-  font-size: 2rem;
-}
-
 .logo {
-  max-height: 80px;
+  max-height: 70px;
 }
 
-/* ----------------------------
-   NAVEGACIÓN PRINCIPAL
------------------------------ */
-nav {
-  background-color: #78c2ad;
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  flex-wrap: wrap;
+/* Navegación */
+.nav {
+  background-color: #00695c;
   padding: 10px 0;
+  text-align: center;
 }
 
-nav li {
-  margin: 0 15px;
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-nav a {
-  text-decoration: none;
+.nav-links li a {
   color: white;
-  font-weight: bold;
-  transition: color 0.3s ease;
+  text-decoration: none;
+  padding: 8px 15px;
+  transition: background 0.3s;
+  border-radius: 5px;
 }
 
-nav a:hover {
-  color: #ffd700;
+.nav-links li a:hover {
+  background-color: #004d40;
 }
 
-/* Botón hamburguesa */
 .menu-toggle {
   display: none;
-  font-size: 28px;
-  padding: 15px;
-  text-align: right;
-  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-/* Navegación responsive */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
   }
 
-  nav ul {
+  .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #cedcd3;
   }
 
-  nav ul.active {
+  .nav-links.active {
     display: flex;
-  }
-
-  nav li {
-    margin: 10px 0;
   }
 }
 
-/* ----------------------------
-   SECCIONES Y TARJETAS
------------------------------ */
-section.intro {
-  background-color: #eafaf7;
-  padding: 30px;
-  border-radius: 10px;
-  margin-bottom: 20px;
+/* Contenido principal */
+.container {
+  padding: 20px;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
 .card {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
   padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  margin: 20px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .card img {
+  margin-top: 10px;
   max-width: 100%;
+  height: auto;
   border-radius: 10px;
-  margin-top: 15px;
 }
 
-/* ----------------------------
-   BOTONES PERSONALIZADOS
------------------------------ */
-.btn {
-  display: inline-block;
-  background-color: #78c2ad;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #5ba491;
-}
-
-/* ----------------------------
-   FORMULARIO DE CITAS
------------------------------ */
-form {
-  background-color: #fff;
+/* Ubicación */
+.ubicacion {
+  margin-top: 40px;
   padding: 20px;
+  background-color: #e8f5e9;
   border-radius: 10px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
-form label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+.ubicacion h3 {
+  font-size: 1.5rem;
+  color: #2E7D32;
+  margin-bottom: 10px;
 }
 
-form input,
-form select,
-form textarea {
-  width: 100%;
-  padding: 10px;
+.ubicacion p {
   margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
 }
 
-/* ----------------------------
-   PIE DE PÁGINA
------------------------------ */
-footer {
-  background-color: #78c2ad;
+.mapa iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 8px;
+}
+.imagen-derecha {
+  float: right;
+  max-width: 40%;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  
+}
+
+.imagen-derecha:hover {
+  transform: scale(1.03);
+}
+
+
+/* Footer */
+.footer {
+  background-color: #004d40;
   color: white;
   text-align: center;
-  padding: 15px;
+  padding: 15px 0;
   margin-top: 40px;
-  font-size: 0.9rem;
 }
-input, select, textarea, button {
+.intro-dos-columnas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.texto-izquierda {
+  flex: 1;
+}
+
+/* Contenedor flexible de dos columnas */
+.intro-dos-columnas {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+/* Columna de texto */
+.texto-izquierda {
+  flex: 1 1 50%;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Columna de imagen */
+.imagen-derecha {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Imagen que ocupa todo su contenedor sin salirse */
+.imagen-derecha img {
   width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 16px;
+  max-width: 150px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
+/* RESPONSIVE - se apila verticalmente y centra */
+@media (max-width: 500px) {
+  .intro-dos-columnas {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .imagen-derecha {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .imagen-derecha img {
+    max-width: 90%;
+  }
 }
 
-button:hover {
-  background-color: #45a049;
-}
+

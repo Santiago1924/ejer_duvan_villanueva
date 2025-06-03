@@ -2,14 +2,15 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Promociones - Caninos y Felinos</title>
   <link rel="stylesheet" href="CSS.css/style.css" />
-  <link rel="stylesheet" href="CSS.css/stylet.css">
+  <link rel="stylesheet" href="CSS.css/stylet.css" />
 </head>
 <body class="fondo-animado">
 
-  <header>
+  <!-- Encabezado -->
+  <header class="header">
     <div class="header-content">
       <div>
         <h1>Caninos y Felinos</h1>
@@ -19,39 +20,44 @@
     </div>
   </header>
 
-  <div class="menu-toggle" onclick="toggleMenu()">☰ Menú</div>
-
-  <nav>
-    <ul id="nav-links">
+  <!-- Menú de navegación -->
+  <nav class="nav">
+    <button class="menu-toggle" onclick="toggleMenu()">☰ Menú</button>
+    <ul id="nav-links" class="nav-links">
       <li><a href="index.html">Inicio</a></li>
       <li><a href="servicios.html">Servicios</a></li>
       <li><a href="productos.html">Productos</a></li>
       <li><a href="guarderia.html">Guardería</a></li>
-      <li><a href="promociones.html">Promociones</a></li>
+      <li><a href="promociones.html" class="active-link">Promociones</a></li>
       <li><a href="registro.html">Registro</a></li>
     </ul>
   </nav>
 
+  <!-- Contenido principal -->
   <main class="container">
     <section class="intro">
       <h2>Promociones Especiales</h2>
-      <p>
-        Aprovecha nuestras ofertas exclusivas para mantener la salud de tu mascota sin afectar tu bolsillo:
-      </p>
-      <ul>
-        <li>2x1 en consultas los martes</li>
-        <li>10% de descuento en alimentos premium</li>
-        <li>Vacunación con revisión gratuita</li>
-        <li>Descuentos por servicios combinados (baño + consulta + guardería)</li>
+      <p>Aprovecha nuestras promociones exclusivas para consentir a tus mascotas:</p>
+      <ul class="promo-list">
+        <div class="imagen-derecha">
+      <img src="img/Promociones.png" alt="Promociones para mascotas"  />
+      </div>
+        <li> 2x1 en baños los fines de semana</li>
+        <li> 20% de descuento en alimentos seleccionados</li>
+        <li> Consulta gratuita en tu primera visita</li>
+        <li> Promociones mensuales en juguetes y collares</li>
+        <li> Plan de vacunas con precio especial</li>
       </ul>
-      <img src="img/Promociones.png" alt="Promociones veterinarias" class="logo" />
+      
     </section>
   </main>
 
-  <footer>
+  <!-- Pie de página -->
+  <footer class="footer">
     <p>&copy; 2025 Caninos y Felinos. Todos los derechos reservados.</p>
   </footer>
 
+  <!-- Script para menú responsive -->
   <script>
     function toggleMenu() {
       document.getElementById("nav-links").classList.toggle("active");

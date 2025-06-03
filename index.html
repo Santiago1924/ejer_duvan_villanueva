@@ -2,16 +2,15 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Caninos y Felinos</title>
   <link rel="stylesheet" href="CSS.css/style.css" />
-  <link rel="stylesheet" href="CSS.css/stylet.css">
+  <link rel="stylesheet" href="CSS.css/stylet.css"/>
 </head>
 <body class="fondo-animado">
-  
 
   <!-- Encabezado -->
-  <header>
+  <header class="header">
     <div class="header-content">
       <div>
         <h1>Caninos y Felinos</h1>
@@ -21,12 +20,10 @@
     </div>
   </header>
 
-  <!-- Botón hamburguesa -->
-  <div class="menu-toggle" onclick="toggleMenu()">☰ Menú</div>
-
   <!-- Menú de navegación -->
-  <nav>
-    <ul id="nav-links">
+  <nav class="nav">
+    <button class="menu-toggle" onclick="toggleMenu()">☰ Menú</button>
+    <ul id="nav-links" class="nav-links">
       <li><a href="index.html">Inicio</a></li>
       <li><a href="servicios.html">Servicios</a></li>
       <li><a href="productos.html">Productos</a></li>
@@ -43,35 +40,42 @@
       <p>
         Nos preocupamos por la salud y felicidad de tus mascotas. Descubre nuestros servicios y consejos para su bienestar.
       </p>
-      
     </section>
 
     <article class="card">
       <h3>Consejos para una alimentación saludable</h3>
-      <p class="align">
-        Una buena alimentación es esencial para garantizar la salud y longevidad de nuestras mascotas. 
-        Cada animal tiene necesidades nutricionales específicas según su especie, edad, tamaño y nivel de actividad. 
-        Es recomendable ofrecer alimentos balanceados de calidad, formulados especialmente para su tipo de mascota, evitando darles sobras de comida humana o productos no aptos para su digestión. 
-        El alimento debe suministrarse en porciones adecuadas, siguiendo las recomendaciones del veterinario o del fabricante, para prevenir el sobrepeso y problemas digestivos. Además, es fundamental que siempre tengan acceso a agua limpia y fresca. 
-        En algunos casos, pueden requerir suplementos o dietas especiales, por lo que las consultas veterinarias periódicas son clave para ajustar su nutrición a cada etapa de su vida.
-        <a href="https://www.tierragro.com/blogs/news/8-consejos-clave-para-lograr-una-mejor-alimentacion-de-tu-mascota-4-tips?srsltid=AfmBOooCA4-AYBFOVoWHyxDnIHipSjBgLDl4TgUpWUEj3w-Np5B9wbsh" target="_blank">Leer más</a>
+      <p>
+        Una buena alimentación es esencial para garantizar la salud y longevidad de nuestras mascotas.
+        Cada animal tiene necesidades nutricionales específicas según su especie, edad, tamaño y nivel de actividad.
+        <a href="https://www.tierragro.com/blogs/news/8-consejos-clave-para-lograr-una-mejor-alimentacion-de-tu-mascota-4-tips" target="_blank">Leer más</a>
       </p>
-      <img src="img/Alimentaciòn_Mascotas.png" alt="Alimentación de mascotas"  class="logo" />
+      <img src="img/Alimentaciòn_Mascotas.png" alt="Alimentación de mascotas" class="logo" />
     </article>
 
     <article class="card">
       <h3>Visitas veterinarias periódicas</h3>
       <p>
-        Realizar consultas frecuentes con el veterinario es fundamental para garantizar la salud y el bienestar de tu mascota. Estas revisiones permiten detectar de forma temprana cualquier síntoma o enfermedad que pueda afectar a tu animal, 
-        incluso antes de que se manifiesten signos visibles. Además, el veterinario puede aconsejarte sobre la alimentación, el ejercicio, las vacunas y los cuidados preventivos que tu mascota necesita según su edad, raza y condición. Mantener un control regular ayuda a prolongar la vida de tu mascota y a evitar complicaciones que podrían derivar en tratamientos más costosos o delicados. 
-        Recuerda que una visita a tiempo puede marcar la diferencia para que tu compañero peludo tenga una vida sana y feliz.
+        Realizar consultas frecuentes con el veterinario es fundamental para garantizar la salud y el bienestar de tu mascota.
         <a href="https://www.imaios.com/es/vet-anatomy" target="_blank">Leer más</a>
       </p>
-      <img src="img/Consulta veterinaria.png" alt="Consulta veterinaria" class="logo"/>
+      <img src="img/Consulta veterinaria.png" alt="Consulta veterinaria" class="logo" />
     </article>
 
+    <!-- Sección de ubicación -->
+    <section class="ubicacion">
+      <h3>¿Dónde estamos ubicados?</h3>
+      <p>Visítanos en nuestra sede principal. ¡Tu mascota siempre es bienvenida!</p>
+      <div class="mapa">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.773927750342!2d-74.07209278523863!3d4.648283043240932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99d8ba67f173%3A0x4fd1b8b19e17c4c9!2sBogot%C3%A1!5e0!3m2!1ses!2sco!4v1620159913805!5m2!1ses!2sco"
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
   <!-- Pie de página -->
-  <footer>
+  <footer class="footer">
     <p>&copy; 2025 Caninos y Felinos. Todos los derechos reservados.</p>
   </footer>
 
@@ -81,6 +85,5 @@
       document.getElementById("nav-links").classList.toggle("active");
     }
   </script>
-
 </body>
 </html>

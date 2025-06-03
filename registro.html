@@ -3,98 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Duvan Santiago Villanueva</title>
-  <link rel="stylesheet" href="CSS.css/stylet.css"> <!-- Enlace a CSS (opcional) -->
+  <title>Registro - Caninos y Felinos</title>
+  <link rel="stylesheet" href="CSS.css/style.css">
+  <link rel="stylesheet" href="CSS.css/stylet.css">
 </head>
-<body>
-    <div class="container form-container">
-        <h2>veterinaria caninos y Felinos</h2>
-        <form action="agregar.php" name ='form1' id='form1' method="get" enctype="multipart/form-data">
+<body class="fondo-animado">
 
-         
-            
-
-            <!-- input para Nùmeros -->
-
-             <div class="form-group-custom">
-                <label for="doc" class="">Documento</label>
-                <input type="number" name="doc" id="doc" placeholder="Ingrese Documento">
-             </div>
-
-
-            <!-- input para Texto -->
-
-             <div class="form-group-custom">
-                <label for="Nom" class="form label">Nombres y Apellidos</label>
-                <input type="text" name="Nom" id="Nom" placeholder="Ingrese Nombres" class="form-control">
-             </div>
-
-             
-            <!-- input para password -->
-
-             <div class="form-group-custom">
-                <label for="pass" class="">Ingrese Contraseña</label>
-                <input type="password" name="pass" id="pass" placeholder="Ingrese password">
-             </div>
-
-             
-            <!-- input para Email -->
-
-             <div class="form-group-custom">
-                <label for="Email" class="">Email</label>
-                <input type="email" name="email" id="email" placeholder="Ejemplo@dominio.com">
-             </div>
-
-             
-            <!-- input para Time -->
-
-             <div class="form-group-custom">
-                <label for="Time" class="">Hora</label>
-                <input type="time" name="time" id="time">
-             </div>
-            
-             
-            <!-- input para check box -->
-
-             <div class="form-group-custom">
-                <label for="Seleccione" class="">Seleccionar: </label>
-                <br>
-                <br>
-                <label for="Seleccione" class="">Caninos</label>
-                <input type="checkbox" name="select" id="select">
-                <label for="Seleccione" class="">Felinos</label>
-                <input type="checkbox" name="select" id="select">
-             </div>
-
-             <!-- input para Lista  -->
-
-             <div class="form-group-custom">
-                <label for="Lista" class="">Listas</label>
-                <select name="lista" name="lista" id="lista">
-                        <option value="1">Administrador</option>
-                        <option value="2">Amo</option>
-                        <option value="3">veterinario</option>
-                </select>
-                
-             </div>
-
-
-             <div class="form-group-custom">
-                <input type="submit" name="Enviar" id="Enviar" value="submit" class="btn-custom">
-             </div>
-
-
-
-
-
-
-        </form>
-
-
-
+  <!-- Encabezado -->
+  <header class="header">
+    <div class="header-content">
+      <div>
+        <h1>Caninos y Felinos</h1>
+        <p>Cuidamos a quienes amas</p>
+      </div>
+      <img src="img/logo.png" alt="Logo Caninos y Felinos" class="logo" />
     </div>
+  </header>
 
-  
+  <!-- Menú de navegación -->
+  <nav class="nav">
+    <button class="menu-toggle" onclick="toggleMenu()">☰ Menú</button>
+    <ul id="nav-links" class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="guarderia.html">Guardería</a></li>
+      <li><a href="promociones.html">Promociones</a></li>
+      <li><a href="registro.html" class="active-link">Registro</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main class="container">
+    <section class="intro">
+      <h2>Formulario de Registro</h2>
+      <form action="agregar.php" name="form1" id="form1" method="get" enctype="multipart/form-data" class="form-container">
+        
+        <div class="form-group-custom">
+          <label for="doc">Documento</label>
+          <input type="number" name="doc" id="doc" placeholder="Ingrese Documento">
+        </div>
+
+        <div class="form-group-custom">
+          <label for="Nom">Nombres y Apellidos</label>
+          <input type="text" name="Nom" id="Nom" placeholder="Ingrese Nombres">
+        </div>
+
+        <div class="form-group-custom">
+          <label for="pass">Contraseña</label>
+          <input type="password" name="pass" id="pass" placeholder="Ingrese contraseña">
+        </div>
+
+        <div class="form-group-custom">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="ejemplo@dominio.com">
+        </div>
+
+        <div class="form-group-custom">
+          <label for="time">Hora</label>
+          <input type="time" name="time" id="time">
+        </div>
+
+        <div class="form-group-custom">
+          <label>Tipo de Mascota:</label><br>
+          <label><input type="checkbox" name="select[]" value="Canino"> Caninos</label>
+          <label><input type="checkbox" name="select[]" value="Felino"> Felinos</label>
+        </div>
+
+        <div class="form-group-custom">
+          <label for="lista">Rol</label>
+          <select name="lista" id="lista">
+            <option value="1">Administrador</option>
+            <option value="2">Amo</option>
+            <option value="3">Veterinario</option>
+          </select>
+        </div>
+
+        <div class="form-group-custom">
+          <input type="submit" name="Enviar" id="Enviar" value="Registrar" class="btn-custom">
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <p>&copy; 2025 Caninos y Felinos. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-links").classList.toggle("active");
+    }
+  </script>
 
 </body>
 </html>

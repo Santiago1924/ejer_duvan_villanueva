@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Guardería - Caninos y Felinos</title>
   <link rel="stylesheet" href="CSS.css/style.css" />
-  <link rel="stylesheet" href="CSS.css/stylet.css">
 </head>
 <body class="fondo-animado">
 
-  <header>
+  <!-- Encabezado -->
+  <header class="header">
     <div class="header-content">
       <div>
         <h1>Caninos y Felinos</h1>
@@ -19,39 +19,43 @@
     </div>
   </header>
 
-  <div class="menu-toggle" onclick="toggleMenu()">☰ Menú</div>
-
-  <nav>
-    <ul id="nav-links">
+  <!-- Menú de navegación -->
+  <nav class="nav">
+    <button class="menu-toggle" onclick="toggleMenu()">☰ Menú</button>
+    <ul id="nav-links" class="nav-links">
       <li><a href="index.html">Inicio</a></li>
       <li><a href="servicios.html">Servicios</a></li>
       <li><a href="productos.html">Productos</a></li>
-      <li><a href="guarderia.html">Guardería</a></li>
+      <li><a href="guarderia.html" class="active-link">Guardería</a></li>
       <li><a href="promociones.html">Promociones</a></li>
       <li><a href="registro.html">Registro</a></li>
     </ul>
   </nav>
 
+  <!-- Contenido principal -->
   <main class="container">
     <section class="intro">
       <h2>Guardería para Mascotas</h2>
-      <p>
-        Nuestra guardería está diseñada para brindar comodidad, seguridad y diversión a tu mascota mientras estás fuera.
-      </p>
-      <ul>
+      <p>Nuestra guardería está diseñada para brindar comodidad, seguridad y diversión a tu mascota mientras estás fuera.</p>
+      <ul class="service-list">
+        <div class="imagen-derecha">
+      <img src="img/Guarderia.png" alt="Guardería para mascotas" />
+      </div>
         <li>Espacios amplios y limpios</li>
         <li>Supervisión veterinaria 24/7</li>
         <li>Juegos y actividades personalizadas</li>
         <li>Reportes diarios para los dueños</li>
       </ul>
-      <img src="img/Guarderia.png" alt="Guardería para mascotas" class="logo"/>
+      
     </section>
   </main>
 
-  <footer>
+  <!-- Pie de página -->
+  <footer class="footer">
     <p>&copy; 2025 Caninos y Felinos. Todos los derechos reservados.</p>
   </footer>
 
+  <!-- Script del menú responsive -->
   <script>
     function toggleMenu() {
       document.getElementById("nav-links").classList.toggle("active");
